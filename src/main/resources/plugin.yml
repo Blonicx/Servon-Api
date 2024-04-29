@@ -1,4 +1,4 @@
 name: Servon-Api
-version: '${version}'
+version: '0.3'
 main: blonicx.servonapi.Servon_Api
 api-version: '1.20'
