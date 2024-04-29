@@ -2,6 +2,10 @@ package blonicx.servonapi;
 
 import blonicx.servonapi.java.cheating.CheatManager;
 import blonicx.servonapi.java.cheating.PlayerValues;
+import blonicx.servonapi.java.discord.RpcManager;
+import blonicx.servonapi.java.discord.WebhookManager;
+import blonicx.servonapi.java.info.PlayerInfoManager;
+import blonicx.servonapi.java.info.ServerInfoManager;
 import blonicx.servonapi.java.manager.LoggerManager;
 import blonicx.servonapi.java.manager.InstanceManager;
 import blonicx.servonapi.java.manager.PlayerManager;
@@ -23,6 +27,14 @@ public final class Servon_Api extends JavaPlugin {
     File pluginFile = getFile();
     String pluginFilePath = pluginFile.getPath();
 
+    //Instances of Discord//
+    private RpcManager rpcManager;
+    private WebhookManager webhookManager;
+
+    //Instances of Infos//
+    private PlayerInfoManager playerInfoManager;
+    private ServerInfoManager serverInfoManager;
+
     //Instances of Managers//
     private InstanceManager instanceManager;
     private PlayerManager playerManager;
@@ -38,6 +50,14 @@ public final class Servon_Api extends JavaPlugin {
 
     //Instance//
     void Instance(){
+        //Instances of Infos//
+        serverInfoManager = new ServerInfoManager();
+        playerInfoManager = new PlayerInfoManager();
+
+        //Instances of Discord//
+        rpcManager = new RpcManager();
+        webhookManager = new WebhookManager();
+
         //Instance of Managers//
         instanceManager = new InstanceManager();
         playerManager = new PlayerManager();
@@ -66,6 +86,7 @@ public final class Servon_Api extends JavaPlugin {
     public void onEnable() {
         //Check for Servon Load
         if(isLoadedByServon() == true) {
+            //Load Classes if loaded by Servon
             Instance();
         }
         else{
