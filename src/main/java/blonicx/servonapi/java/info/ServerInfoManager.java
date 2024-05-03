@@ -10,4 +10,8 @@ public class ServerInfoManager {
     public static String serverIp(){
         return Bukkit.getServer().getIp();
     }
+
+    public static int maxPlayer(){
+        return Bukkit.getMaxPlayers();
+    }
 }

@@ -1,7 +1,8 @@
 package blonicx.servonapi;
 
-import blonicx.servonapi.java.cheating.CheatManager;
-import blonicx.servonapi.java.cheating.PlayerValues;
+//Imports//
+import blonicx.servonapi.java.anticheat.CheatManager;
+import blonicx.servonapi.java.anticheat.PlayerValues;
 import blonicx.servonapi.java.discord.RpcManager;
 import blonicx.servonapi.java.discord.WebhookManager;
 import blonicx.servonapi.java.info.PlayerInfoManager;
@@ -11,7 +12,8 @@ import blonicx.servonapi.java.manager.InstanceManager;
 import blonicx.servonapi.java.manager.PlayerManager;
 import blonicx.servonapi.java.monetization.AdsManager;
 import blonicx.servonapi.java.monetization.DonationManager;
-import org.bukkit.Bukkit;
+
+//Bukkit Imports//
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -72,27 +74,28 @@ public final class Servon_Api extends JavaPlugin {
         donationManager = new DonationManager();
     }
 
-    //Check for Loader//
-    private boolean isLoadedByServon(){
-        if (pluginFilePath.contains("ServonLoader")){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
+    //Check for Loader (Currently not active)//
+    //private boolean isLoadedByServon(){
+    //    if (pluginFilePath.contains("ServonLoader")){
+    //        return true;
+    //    }
+    //    else{
+    //        return false;
+    //    }
+    //}
 
     @Override
     public void onEnable() {
-        //Check for Servon Load
-        if(isLoadedByServon() == true) {
-            //Load Classes if loaded by Servon
-            Instance();
-        }
-        else{
-            //Error if not loaded by Servon
-            logger.warning("Not loaded by ServonLoader!");
-            Bukkit.getServer().getPluginManager().disablePlugin(plugin);
-        }
+        //Check for Servon Load (Currently not active)
+        //if(isLoadedByServon() == true) {
+
+        //Load Classes if loaded by Servon
+        Instance();
+        //}
+        //else{
+        //    //Error if not loaded by Servon
+        //    logger.warning("Not loaded by ServonLoader!");
+        //    Bukkit.getServer().getPluginManager().disablePlugin(plugin);
+        //}
     }
 }

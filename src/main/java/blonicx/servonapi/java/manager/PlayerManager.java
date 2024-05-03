@@ -1,5 +1,6 @@
 package blonicx.servonapi.java.manager;
 
+import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 
 public class PlayerManager {
@@ -7,11 +8,15 @@ public class PlayerManager {
         p.setHealth(health);
     }
 
+    public static void setGameMode(Player p, GameMode gameMode){
+        p.setGameMode(gameMode);
+    }
+
     public static void sendMessage(Player p, String msg){
         p.sendMessage(msg);
     }
 
-    public static void restHealth(Player p){
+    public static void restMaxHealth(Player p){
         p.setMaxHealth(20);
     }
 

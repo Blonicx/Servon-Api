@@ -1,4 +1,4 @@
-package blonicx.servonapi.java.cheating;
+package blonicx.servonapi.java.anticheat;
 
 import org.bukkit.entity.Player;
 
