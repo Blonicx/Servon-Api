@@ -4,34 +4,27 @@ package blonicx.servonapi;
 import blonicx.servonapi.java.anticheat.CheatManager;
 import blonicx.servonapi.java.anticheat.PlayerValues;
 import blonicx.servonapi.java.discord.RpcManager;
-import blonicx.servonapi.java.discord.WebhookManager;
+import blonicx.servonapi.java.messages.discord.WebhookMessages;
 import blonicx.servonapi.java.info.PlayerInfoManager;
 import blonicx.servonapi.java.info.ServerInfoManager;
 import blonicx.servonapi.java.manager.LoggerManager;
 import blonicx.servonapi.java.manager.InstanceManager;
 import blonicx.servonapi.java.manager.PlayerManager;
-import blonicx.servonapi.java.monetization.AdsManager;
-import blonicx.servonapi.java.monetization.DonationManager;
 
 //Bukkit Imports//
-import org.bukkit.plugin.Plugin;
+import blonicx.servonapi.java.messages.minecraft.ChatMessages;
+import blonicx.servonapi.java.manager.UiManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
 import java.util.logging.Logger;
 
 public final class Servon_Api extends JavaPlugin {
 
     Logger logger = getLogger();
 
-    Plugin plugin = this;
-
-    File pluginFile = getFile();
-    String pluginFilePath = pluginFile.getPath();
-
     //Instances of Discord//
     private RpcManager rpcManager;
-    private WebhookManager webhookManager;
+    private WebhookMessages webhookMessages;
 
     //Instances of Infos//
     private PlayerInfoManager playerInfoManager;
@@ -41,14 +34,14 @@ public final class Servon_Api extends JavaPlugin {
     private InstanceManager instanceManager;
     private PlayerManager playerManager;
     private LoggerManager loggerManager;
+    private UiManager uiManager;
 
     //Instance of CheatingManagers//
     private CheatManager cheatManager;
     private PlayerValues playerValues;
 
-    //Instance of Monetization//
-    private AdsManager adsManager;
-    private DonationManager donationManager;
+    //Instance of Messages//
+    private ChatMessages chatMessages;
 
     //Instance//
     void Instance(){
@@ -58,44 +51,25 @@ public final class Servon_Api extends JavaPlugin {
 
         //Instances of Discord//
         rpcManager = new RpcManager();
-        webhookManager = new WebhookManager();
+        webhookMessages = new WebhookMessages();
 
         //Instance of Managers//
         instanceManager = new InstanceManager();
         playerManager = new PlayerManager();
         loggerManager = new LoggerManager();
+        uiManager = new UiManager();
 
-        //Instance of CheatingManagers//
+        //Instance of AntiCheat//
         cheatManager = new CheatManager();
         playerValues = new PlayerValues();
 
-        //Instance of Monetization//
-        adsManager = new AdsManager();
-        donationManager = new DonationManager();
+        //Instance of Messages//
+        chatMessages = new ChatMessages();
     }
-
-    //Check for Loader (Currently not active)//
-    //private boolean isLoadedByServon(){
-    //    if (pluginFilePath.contains("ServonLoader")){
-    //        return true;
-    //    }
-    //    else{
-    //        return false;
-    //    }
-    //}
 
     @Override
     public void onEnable() {
-        //Check for Servon Load (Currently not active)
-        //if(isLoadedByServon() == true) {
-
-        //Load Classes if loaded by Servon
         Instance();
-        //}
-        //else{
-        //    //Error if not loaded by Servon
-        //    logger.warning("Not loaded by ServonLoader!");
-        //    Bukkit.getServer().getPluginManager().disablePlugin(plugin);
-        //}
+        logger.info("Servon-Api got Loaded");
     }
 }

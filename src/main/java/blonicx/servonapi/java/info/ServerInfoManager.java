@@ -1,6 +1,10 @@
 package blonicx.servonapi.java.info;
 
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+
+import java.util.Collection;
+import java.util.List;
 
 public class ServerInfoManager {
     public static int serverPort(){

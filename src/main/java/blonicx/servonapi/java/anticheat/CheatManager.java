@@ -1,5 +1,6 @@
 package blonicx.servonapi.java.anticheat;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 public class CheatManager {
@@ -12,7 +13,7 @@ public class CheatManager {
     }
 
     public static void sendWarning(Player p, String warning){
-        p.sendMessage(warning);
+        p.sendMessage(ChatColor.RED + warning);
     }
 
     public static void clearPlayerInventory(Player p){

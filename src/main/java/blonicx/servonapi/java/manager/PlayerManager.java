@@ -1,6 +1,7 @@
 package blonicx.servonapi.java.manager;
 
 import org.bukkit.GameMode;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 public class PlayerManager {
@@ -12,8 +13,8 @@ public class PlayerManager {
         p.setGameMode(gameMode);
     }
 
-    public static void sendMessage(Player p, String msg){
-        p.sendMessage(msg);
+    public static void teleportPlayer(Player p, Location loc){
+        p.teleport(loc);
     }
 
     public static void restMaxHealth(Player p){

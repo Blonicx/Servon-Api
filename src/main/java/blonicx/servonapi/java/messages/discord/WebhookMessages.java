@@ -1,4 +1,4 @@
-package blonicx.servonapi.java.discord;
+package blonicx.servonapi.java.messages.discord;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -7,7 +7,7 @@ import java.io.DataOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class WebhookManager {
+public class WebhookMessages {
     public static void sendWebhookMessage(String message, String webhookUrl) {
         try {
             URL url = new URL(webhookUrl);

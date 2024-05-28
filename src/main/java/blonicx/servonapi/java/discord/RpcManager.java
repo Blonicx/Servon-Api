@@ -14,7 +14,13 @@ public class RpcManager {
         // Initialize Discord RPC
         discordRPC = DiscordRPC.INSTANCE;
         DiscordEventHandlers handlers = new DiscordEventHandlers();
-        discordRPC.Discord_Initialize(applicationId, handlers, true, "");
+
+        //Check for appId and if no appId use the Servon-Api app
+        if(applicationId == ""){
+            discordRPC.Discord_Initialize("1237097724625551391", handlers, true, "");
+        }else {
+            discordRPC.Discord_Initialize(applicationId, handlers, true, "");
+        }
 
         // Set initial presence
         presence = new DiscordRichPresence();

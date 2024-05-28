@@ -26,4 +26,8 @@ public class InstanceManager {
     public static void InstanceSheep(Location loc, Player p){
         p.getWorld().spawnEntity(loc, EntityType.SHEEP);
     }
+
+    public static void InstanceEnderDragon(Location loc, Player p){
+        p.getWorld().spawnEntity(loc, EntityType.ENDER_DRAGON);
+    }
 }
