@@ -1,4 +1,4 @@
-package blonicx.servonapi.java.manager;
+package blonicx.servonapi.minecraft.manager;
 
 import org.bukkit.Location;
 import org.bukkit.entity.EntityType;
@@ -12,6 +12,7 @@ public class InstanceManager {
     public static void InstanceSkeleton(Location loc, Player p){
         p.getWorld().spawnEntity(loc, EntityType.SKELETON);
     }
+
     public static void InstanceSpider(Location loc, Player p){
         p.getWorld().spawnEntity(loc, EntityType.SPIDER);
     }
@@ -23,6 +24,7 @@ public class InstanceManager {
     public static void InstanceCow(Location loc, Player p){
         p.getWorld().spawnEntity(loc, EntityType.COW);
     }
+
     public static void InstanceSheep(Location loc, Player p){
         p.getWorld().spawnEntity(loc, EntityType.SHEEP);
     }

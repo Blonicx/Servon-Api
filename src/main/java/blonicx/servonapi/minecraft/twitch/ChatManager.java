@@ -1,4 +1,4 @@
-package blonicx.servonapi.java.twitch;
+package blonicx.servonapi.minecraft.twitch;
 
 import com.github.philippheuer.credentialmanager.domain.OAuth2Credential;
 import com.github.twitch4j.TwitchClient;

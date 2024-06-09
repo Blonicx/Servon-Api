@@ -1,4 +1,4 @@
-package blonicx.servonapi.java.discord;
+package blonicx.servonapi.minecraft.discord;
 
 import club.minnced.discord.rpc.DiscordEventHandlers;
 import club.minnced.discord.rpc.DiscordRPC;

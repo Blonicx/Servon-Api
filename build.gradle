@@ -22,6 +22,10 @@ dependencies {
     compileOnly "io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT"
     implementation 'club.minnced:java-discord-rpc:2.0.2'
     implementation 'com.github.twitch4j:twitch4j:1.20.0'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+    implementation 'org.yaml:snakeyaml:1.29'
+    implementation 'org.jsoup:jsoup:1.14.3'
+    implementation 'org.mongodb:mongodb-driver-sync:5.1.0'
 }
 
 def targetJavaVersion = 17

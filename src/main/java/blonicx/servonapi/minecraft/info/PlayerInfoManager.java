@@ -1,4 +1,4 @@
-package blonicx.servonapi.java.info;
+package blonicx.servonapi.minecraft.info;
 
 import org.bukkit.entity.Player;
 
@@ -13,7 +13,7 @@ public class PlayerInfoManager {
         return p.getName();
     }
 
-    public static long getPlayTime(Player p{
+    public static long getPlayTime(Player p){
         return p.getPlayerTime();
     }
 

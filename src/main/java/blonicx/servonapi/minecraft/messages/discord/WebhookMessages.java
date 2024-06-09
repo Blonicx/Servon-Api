@@ -1,4 +1,4 @@
-package blonicx.servonapi.java.messages.discord;
+package blonicx.servonapi.minecraft.messages.discord;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

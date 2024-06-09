@@ -1,4 +1,4 @@
-package blonicx.servonapi.java.manager;
+package blonicx.servonapi.minecraft.manager;
 
 import org.bukkit.GameMode;
 import org.bukkit.Location;
@@ -23,5 +23,9 @@ public class PlayerManager {
 
     public static void setMaxHealth(Player p, double maxHealth){
         p.setMaxHealth(maxHealth);
+    }
+
+    public static void setPlayerDisplayName(Player p, String name){
+        p.setDisplayName(name);
     }
 }

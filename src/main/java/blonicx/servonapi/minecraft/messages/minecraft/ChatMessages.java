@@ -1,4 +1,4 @@
-package blonicx.servonapi.java.messages.minecraft;
+package blonicx.servonapi.minecraft.messages.minecraft;
 
 import org.bukkit.entity.Player;
 

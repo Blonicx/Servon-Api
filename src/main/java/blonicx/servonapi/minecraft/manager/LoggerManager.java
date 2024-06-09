@@ -1,4 +1,4 @@
-package blonicx.servonapi.java.manager;
+package blonicx.servonapi.minecraft.manager;
 
 import org.bukkit.Bukkit;
 

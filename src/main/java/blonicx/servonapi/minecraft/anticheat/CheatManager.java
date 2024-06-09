@@ -1,4 +1,4 @@
-package blonicx.servonapi.java.anticheat;
+package blonicx.servonapi.minecraft.anticheat;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
